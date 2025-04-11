@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione</title>
+    <script>
+
+        function ForgetName(){
+            var nome = document.getElementById("Nome");
+
+            if (nome.textContent =="") {
+                var errore = document.getElementById("Alert");
+                errore.innerHTML = "Ti sei dimenticato il nome!";
+            }  
+
+        }
+
+        function ForgetSurname(){
+            var cognome = document.getElementById("Cognome");
+
+            if (cognome.textContent =="") {
+                var errore = document.getElementById("Alert2");
+                errore.innerHTML = "Ti sei dimenticato il cognome!";
+            }  
+
+        }
+
+        function CleanErrorName(){
+            var nome = document.getElementById("Nome");
+
+            if(nome.textContent != "") {
+                var clear = document.getElementById("Alert");
+                clear.innerHTML = "";
+
+            }
+        }
+
+        function CleanErrorName(){
+            var cognome = document.getElementById("Cognome");
+
+            if(cognome.textContent != "") {
+                var clear = document.getElementById("Alert2");
+                clear.innerHTML = "";
+
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+
+    <table>
+        <tr>
+
+            <td> Nome: </td>
+            <td> <input id="Nome" type="text"> </td>
+
+        <tr>
+
+            <td> Cognome: </td>
+            <td> <input id="Cognome" type="text"> </td>
+    
+        </tr>
+
+        </tr>
+
+    </table>
+
+    <br>
+    
+    <button onclick="ForgetName();" onclick="ForgetSurname();"> Registrati </button>
+    
+    <br>
+
+    <table> <td style="background-color: yellow;" id="Alert"> </td> </table>
+    <table> <td style="background-color: rgb(255, 255, 0);" id="ALert2"> </td> </table>
+
+
+
+</body>
+</html>
