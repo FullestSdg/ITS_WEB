@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciao</title>
+</head>
+<body>
+    
+    <div id="risultato"> </div>
+    <div  id="saluto personalizzato"> </div>
+
+        <script>  
+
+            // esempio di funzione che non torna nulla, scrive nella pagina
+            function somma(num1, num2){
+
+                document.getElementById("risultato").innerHTML = "La somma è " + (num1 + num2);
+
+            }
+
+            somma(2,3);     // 5
+            somma(5);       // NaN oppure 5
+
+            // esempio du funzione che torna un valore
+            function benvenuto(nome){
+                
+                return "Welcome " + nome;
+
+            }
+            
+            let nome = prompt("Inserisci il tuo nome: ");
+
+            let output = benvenuto(nome);
+
+            document.getElementById("saluto personalizzato").innerHTML = output;
+
+        </script>
+
+
+
+
+</body>
+</html>

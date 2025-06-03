@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="risultato"> </div>
+    <div id="risultato2"> </div>
+
+    <script>
+
+        function eguaglianza(num1, num2){
+
+            if (num1 === num2){
+
+                return "L'eguaglianza tra " + num1 +" & " + num2 +" è: TRUE"
+
+            }else{
+
+                return "L'eguaglianza tra " + num1 +" & " + num2 +" è: FALSE"
+            }
+        }
+
+        document.getElementById("risultato").innerHTML = eguaglianza(20, 20);
+
+        var nu1 = prompt("Inserisci un numero: ")
+        var nu2 = prompt("Inserisci un numero: ")
+
+        document.getElementById("risultato2").innerHTML = eguaglianza(nu1, nu2)
+
+    </script>
+
+</body>
+</html>
