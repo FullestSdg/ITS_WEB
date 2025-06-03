@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="risultato1" > </div>
+    <div id="risultato2" > </div>
+    <div id="risultato3" > </div>
+
+    <script> 
+
+    /* Scrivi un programma con due funzioni, la prima prende in ingresso un intero e verifica se sia compreso nel range da 1 a 7. Se è compreso, la funzione restituirà TRUE, se non ècompreso restituirà FALSE.
+    La seconda funzione:
+    - nel caso la prima restituisca TRUE visualizza il giorno dellasettimana corrispondente, considerando la seguentecorrispondenza:
+    1 = Lunedì ... 7 = Domenica
+    - nel caso il giorno non sia compreso nel range, la funzionedovrà restituire un messaggio d'errore simile a questo:'Peccato, non posso indovinare il giorno.
+    */
+
+    
+    var num = prompt("Inserisci un numero: ");
+    var n1 = parseInt(num);
+
+    function verifica_numero(n) {
+
+      return n >= 1 && n <= 7;
+      
+    }
+
+
+    function verifica_funzione(n) {
+      switch (n) {
+
+        case 1: return "Lunedì";
+        case 2: return "Martedì";
+        case 3: return "Mercoledì";
+        case 4: return "Giovedì";
+        case 5: return "Venerdì";
+        case 6: return "Sabato";
+        case 7: return "Domenica";
+        default: return "Peccato, non posso indovinare il giorno.";
+
+      }
+    }
+
+    if (verifica_numero(n1)) {
+      document.getElementById("risultato1").innerText = "TRUE";
+      document.getElementById("risultato2").innerText = verifica_funzione(n1);
+    }else{
+      document.getElementById("risultato1").innerText = "FALSE";
+      document.getElementById("risultato2").innerText = "Peccato, non posso indovinare il giorno.";
+
+    }
+
+    </script>
+   
+</body>
+</html>
