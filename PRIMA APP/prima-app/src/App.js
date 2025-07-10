@@ -5,6 +5,7 @@ import Componente1 from './Componente1';
 import { anagrafica } from './data/dati';
 import Contatore from './Contatore';
 import EsempioUseEffect from './EsempioUseEffect';
+import CleanUp from './CleanUp';
 
 function getDate(date){
 
@@ -53,6 +54,7 @@ function App() {
   return (
     <>
     <div className="App">
+      <CleanUp></CleanUp>
       <EsempioUseEffect> </EsempioUseEffect>
       <Contatore></Contatore>
       <h1> {nome1} </h1>
@@ -81,6 +83,10 @@ function App() {
             </div>
           );
         })}
+      <h1></h1>
+      <Clock timezone="0" country="Italy"> </Clock>
+      <Clock timezone="-6" country="USA"></Clock>
+      <Clock timezone="7" country="Japan"></Clock>
       
       
       {/* <h1>Primo Elemento {nome} </h1>

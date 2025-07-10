@@ -19,7 +19,7 @@ const Contatore = () => {
         <>
           <div>{count}</div>
           <div>
-            <button onClick={() => setCount(count - 1)}>Descrementa</button>&nbsp;
+            <button onClick={() => setCount(count - 1)}>Decrementa</button>&nbsp;
             <button onClick={increment}>Incrementa</button>
           </div>
         </>
