@@ -6,6 +6,8 @@ import { anagrafica } from './data/dati';
 import Contatore from './Contatore';
 import EsempioUseEffect from './EsempioUseEffect';
 import CleanUp from './CleanUp';
+import CambiaNome from './CambiaNome';
+import LoginForm from './LoginForm';
 
 function getDate(date){
 
@@ -54,6 +56,8 @@ function App() {
   return (
     <>
     <div className="App">
+      <CambiaNome></CambiaNome>
+      <LoginForm></LoginForm>
       <CleanUp></CleanUp>
       <EsempioUseEffect> </EsempioUseEffect>
       <Contatore></Contatore>
