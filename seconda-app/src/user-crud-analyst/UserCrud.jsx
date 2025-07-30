@@ -12,7 +12,21 @@ const UserCrud =()=>{
     }  
     useEffect(()=>{
         getUsers()
-    },[])
+    },[]);
+
+    const handleDelete = async(id)=>{
+        if(window.confirm("Sei sicuro di voler cancellare questo utente?")){
+            try{
+                const response = await fetch(API_URL+"/"+id,{
+                    method:"DELETE"
+                });
+                if(!response.ok) throw new Error("La chiamata non è andata a buon fine");
+                getUsers();
+            }catch(err){
+                console.log(err)
+            }
+        }
+    }
 
     return (
         <div className="container my-5">
@@ -25,16 +39,18 @@ const UserCrud =()=>{
                     <th>Username</th>
                     <th>Telefono</th>
                     <th>Email</th>
+                    <th>Azioni</th>
                 </thead>
                 <tbody>
                     {
                         users.map((u)=>{
                             return (
-                                <tr>
+                                <tr key={u.id}>
                                     <td>{u.name}</td>
                                     <td>{u.username}</td>
                                     <td>{u.phone}</td>
                                     <td>{u.email}</td>
+                                    <td><button className="btn btn-danger" onClick ={()=> handleDelete(u.id)}>Elimina</button></td>
                                 </tr>
                             )
                         })
