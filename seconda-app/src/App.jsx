@@ -5,15 +5,17 @@ import UserCrud from './user-crud-analyst/UserCrud'
 import CardUtente from './esercizi_agosto/CardUtente';
 import MenuRistorante from './esercizi_agosto/MenuRistorante';
 import Termostato from './esercizi_agosto/Termostato';
+import TodoApp from './todo/TodoApp';
 
 function App() {
 
   return (
     <>
-      <Saluto></Saluto>
+      <TodoApp> </TodoApp>
+     {/* <Saluto></Saluto>
       <CardUtente nome ="Sergio" email = "sdgsergiodg20@gmail.com" imgUrl= "https://placehold.co/600x400/EEE/31343C"></CardUtente>
       <MenuRistorante></MenuRistorante>
-      <Termostato></Termostato>
+      <Termostato></Termostato> */}
     </>
   );
 }
